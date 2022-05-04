@@ -26,30 +26,6 @@ ApplicationWindow {
         id: image
         source: "anawangin-25-1.jpg"
       }
-      Button {
-        id: zoom
-        anchors.left: image.left
-        anchors.top: image.top
-        text: "Fullscreen"
-        onClicked: zoompopup.open()
-      }
-      Popup {
-        id: zoompopup
-        width: mainWindow.width * 0.9
-        height: mainWindow.height * 0.9
-        modal: true
-        focus: true
-        background: Rectangle {
-          id: modalbg
-          color: "grey"
-        }
-        contentItem: Image {
-          id: modalcontent
-          fillMode: Image.PreserveAspectFit
-          source: "anawangin-25-1.jpg"
-        }
-
-      }
     }
 
     Frame {
